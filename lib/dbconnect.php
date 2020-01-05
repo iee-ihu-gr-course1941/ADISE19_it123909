@@ -3,8 +3,8 @@ $host='localhost';
 $db = 'schema';
 require_once "config_local.php";
 
-$user="root";
-$pass="12345678";
+$user=$DB_USER;
+$pass=$DB_PASS;
 
 
 if(gethostname()=='users.iee.ihu.gr') {
