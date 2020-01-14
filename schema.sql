@@ -28,6 +28,11 @@ SET time_zone = "+00:00";
 -- Table structure for table `deck`
 --
 
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`test_project_db` /*!40100 DEFAULT CHARACTER SET utf8 */;
+
+USE `test_project_db`;
+
+
 CREATE TABLE `deck` (
   `id` int(11) NOT NULL,
   `card_category` enum('C','D','H','S') NOT NULL,

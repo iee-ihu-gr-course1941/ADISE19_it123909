@@ -55,7 +55,7 @@ function login() {
 	}
 	var p_type = $('#playerType').val();
 	draw_empty_board(p_type);
-	fill_board();
+
 	
 	$.ajax({url: "blackjack.php/players/"+p_type, 
 			method: 'PUT',

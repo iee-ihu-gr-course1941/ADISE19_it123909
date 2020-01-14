@@ -1,7 +1,7 @@
 <?php
 $host='localhost';
-$db = 'schema';
-require_once "config_local.php";
+$db = 'test_project_db';
+require_once "db_upass.php";
 
 $user=$DB_USER;
 $pass=$DB_PASS;
