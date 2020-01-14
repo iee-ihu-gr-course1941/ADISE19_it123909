@@ -53,7 +53,9 @@ function login() {
 		alert('You have to set a username');
 		return;
 	}
+
 	var p_type = $('#playerType').val();
+	$('.game_initializer').hide();
 	draw_empty_board(p_type);
 
 	
