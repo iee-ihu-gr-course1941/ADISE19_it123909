@@ -117,9 +117,7 @@ function stand(){
 }
 
 function reset(){
-	alert("");
-	$('#buttons').hide();
-	$('#game_initializer').show(1000);
+	alert("The game has beed reseted");
 	$.ajax({url: "blackjack.php/deck/", headers: {"X-Token": me.token}, method: 'POST',  success: draw_empty_board() });
 	
 }
