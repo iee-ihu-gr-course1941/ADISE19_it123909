@@ -9,8 +9,8 @@ $(function () {
 	
 	$('#buttons').hide();
 	$('#loginButton').click( login);
-	$('#hitButton').click( hit(p));
-	$('#standButton').click( stand(p));
+	$('#hitButton').click( hit);
+	$('#standButton').click( stand);
 	$('#resetButton').click( reset);
 	
 });
@@ -51,7 +51,7 @@ function fill_deck(){
 var i=0;
 var j=0;
 
-function hit(p){
+function hit(){
 	   		/*get random js number(id) that is not used by player or groupier with select then update the deck table */
 			var randomId = Math.floor(Math.random() * 52) + 1;
 			var p_type = $('#playerType').val();
@@ -100,7 +100,7 @@ function hit(p){
 
 }
 
-function stand(p){
+function stand(){
 	var p_type = $('#playerType').val();
 
 
