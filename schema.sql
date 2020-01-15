@@ -225,6 +225,18 @@ ALTER TABLE `players`
   ADD PRIMARY KEY (`player_type`);
 COMMIT;
 
+DELIMITER $$
+
+!50003 CREATE  PROCEDURE `clean_deck`()
+BEGIN
+	replace into deck select * from deck_empty;
+	update `players` set username=null, token=null;
+	update `game_status` set `status`='not active', `p_turn`=null, `result`=null;
+    END $$
+DELIMITER ;
+
+
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
